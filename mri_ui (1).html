@@ -1,0 +1,156 @@
+<html><head>
+<title> Mainpage
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@keyframes bgcolor {
+    0% {
+        background-color: powderblue;
+    }
+    30%{
+	background-color: powderblue;
+    }
+    
+    100% {
+        background-color: #cce2cb;
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+}
+
+label {
+  background-color: #ffd3d5;
+  color: black;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+.button {
+  background-color: #ffd3d5;
+  color: black;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  font-size: 15px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 0 rem;
+  border: none;
+
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+</style>
+<body style="background-color:powderblue;">
+
+
+
+
+<script type="text/javascript">
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 5000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "https://www.neurologyadvisor.com/wp-content/uploads/sites/10/2021/07/brain.tumor_.MRI_G_1088377588-860x744.jpg";
+          images[1] = "https://www2.mhsi.us/blog/wp-content/uploads/2021/06/BrainTumor-1250205787.jpg";
+          images[2] = "https://lmimirror3pvr.azureedge.net/static/media/7961/354ec96e-a32c-440e-90ed-d3f30d02245c/diagnosis-machine_960x540.jpg";
+	  images[3] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhh5YjtirxkpzHdT7tGSUN1lCosz9lV7hVr02bwijG2Z3moPbsI07tb4BXhirZ9l7qEM&usqp=CAU"
+	  images[4] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReArAbjbi8-oHZpA0XC8AP_CLMG8C3UgqhkQbaY1NQAz_yQOHHte1dZ1IRO-4RSi8RNvs&usqp=CAU"
+
+</script>
+
+
+</head>
+<body onload="startTimer()"><center>
+<h1 style="color:black;"><i>EL INFINITO : MRI ANALYSIS </i></h1><br>
+<div class="row">
+<div class="column">
+<img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReArAbjbi8-oHZpA0XC8AP_CLMG8C3UgqhkQbaY1NQAz_yQOHHte1dZ1IRO-4RSi8RNvs&amp;usqp=CAU" width="600" height="450">
+</div>
+<div class="column">
+<center><p style="font-size:25px; color:black;"><i>What do we do?</i></p>
+<p style="font-size:17px; color:green;"> Brain tumors are often uncommon among people, but can pose a huge threat to the health of a living being.
+Tumors can arise in any age group, but the outcome need not always be grave-- especially when they are diagnosed at earlier stages and accurately with the 
+proper equipment. El infinito MRI analysis offers the facility to promptly analyse and detect brain tumors in MRI scans, thereby reducing human error / 
+negligence and time consumption while assuring high acuracy of results. All you have to do is upload an MRI image down below and receive
+AI-aided diagnosis, along with instructions regarding how to proceed with treatment / maintain a healthy lifestyle. 
+</p>
+<div class="row"><center>
+<form action="http://localhost:5000/mri_redirect" id="upload-file" method="POST" enctype="multipart/form-data">
+<table cellpadding="10px" cellspacing="20px" style="color:red;">
+<tbody><tr><td>Upload an MRI image here: </td><td align="left"><input type="file" id="actual-btn" name="image" id="image" accept=".png, .jpg, .jpeg" hidden/>
+<label for="actual-btn">Choose File</label>
+<span id="file-chosen">No file chosen</span>
+<script>
+
+const actualBtn = document.getElementById('actual-btn');
+
+const fileChosen = document.getElementById('file-chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+
+</script>
+
+</td></tr>
+<tr><td></td><td align="left"> <button class="button" >Submit</button></td></tr>
+</tbody></table>
+</form>
+</center>
+</div>
+</center>
+</div>
+</div>
+<br>
+<footer style="background-color:#ffd3d5;">
+<h2 align="left" class="fontsize18 gouthammedium wtcolor">&emsp;&emsp;Contact us for more details or queries: </h2>
+<p align="left" style="font-size:17px; color:#1a1a1a;"><i>
+&emsp;Anish Subramanian -18BLC1055
+ <br>&emsp;Anahitaa R -18BCE1325
+ <br> &emsp;Aravind G -18BCE1190
+ <br> &emsp;Keerthan R A -18BCE1208
+ <br> &emsp;Surya Srinivasan -18BCE1055
+ <br>
+ <br>
+</i></p>
+</footer>
+</div>
+
+
+
