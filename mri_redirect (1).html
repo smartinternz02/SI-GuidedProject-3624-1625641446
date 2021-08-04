@@ -1,0 +1,139 @@
+<html>
+<head>
+<title> Results 
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+
+@keyframes bgcolor {
+    0% {
+        background-color: #cce2cb
+    }
+
+    30% {
+        background-color: #f3b0c3;
+    }
+
+    60% {
+        background-color: #ffc8a2;
+    }
+
+    90% {
+        background-color: #ffaea5;
+    }
+
+    100% {
+        background-color: #ffeac2;
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+}
+table{
+color: "red";
+font-family:"helvetica";
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: powderblue;
+  margin-left: 160px;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 0.90;
+  right: 0;
+}
+</style>
+
+
+</head>
+<body bgcolor=#eeffff><center>
+<h1 style="color:purple;"><i>EL INFINITO : MRI ANALYSIS </i></h1><br>
+<div class="row">
+<div class="column">
+<h2 style="color: red;">RESULTS: </h2><br>
+<p style="font-size:17px; color:black;">According to our Artificial Intelligence-powered image processing analysis, </p>
+<p style="font-size:17px; color:red;"><b><i>
+<span>
+{{prediction_text}}
+</span>
+</i></b></p>
+</div>
+<div class="column" align="left">
+<p style="font-size:25px; color:green;"><i>What should <u>you</u> do?</i></p>
+<p style="font-size:17px; color:#111111;"> 
+<b>Consult your doctor:</b><br><br>
+Your doctor should be able to guide you further and provide insight pertaining to treatment 
+options and suggestions. 
+<br><br>
+<b>Seek the support of kith and kin:</b><br>
+<br>
+Although brain tumors are seldom cancerous and tend to be typically benign and easy to treat 
+especially when diagnosed early, support from loved ones makes the process easier and less woesome.
+<br><br>
+<b>Talk to your therapist:</b><br><br>
+It's hard going through treatment and although it may seem like emotions are best kept at bay, 
+it may not always work -- instead of letting your worries and bottled-up emotions affect your physical and mental health,
+ talk to a professional who can help you cope with your difficulties. <br>
+
+</p>
+<br>
+<button class="button" onclick="goBack()"><span>Go Back</span>
+</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</div>
+</body>
+</html>
