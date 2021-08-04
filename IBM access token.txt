@@ -1,0 +1,3 @@
+IBM access token: p-9ae415374995c7307c0896f71144fc3bec548700
+Dataset obtained from: https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection
+NOTE: Location for IBM Watson and the ML services is to be set to Dallas. 
